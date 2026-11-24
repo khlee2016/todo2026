@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>할 일</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="month">
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">✓</span>
+        <h1>할 일</h1>
+      </div>
+      <div class="pager">
+        <button id="prevBtn" class="btn ghost icon-btn" type="button">이전</button>
+        <h2 id="periodLabel"></h2>
+        <button id="nextBtn" class="btn ghost icon-btn" type="button">다음</button>
+      </div>
+      <div class="tools">
+        <button id="todayBtn" class="btn ghost" type="button">오늘</button>
+        <div class="views" role="tablist" aria-label="보기 방식">
+          <button type="button" role="tab" data-view="day" aria-selected="false">일별</button>
+          <button type="button" role="tab" data-view="week" aria-selected="false">주별</button>
+          <button type="button" role="tab" data-view="month" aria-selected="true">월별</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section id="board" aria-label="달력"></section>
+      <section id="detail" class="panel" aria-label="선택한 날짜"></section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
